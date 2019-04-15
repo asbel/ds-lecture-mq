@@ -4,8 +4,8 @@ CONTENT
 
 1. What are Message Queues?
 2. What is asynchronous communications protocol?
-3. The need for Message Queues/ What problem do they solve?
-4. Use cases of Message queues / How Message Queues are used 
+3. The need for Message Queues
+4. Use cases of Message queues
 5. Types of Message Queues
 6. RabbitMQ 
 7. CloudMQ
@@ -24,7 +24,16 @@ Asynchronous operation is non-blocking and only initiates an operation instead o
 
 3. The need for Message Queues/ What problem do they solve?
 
-Message queues are an answer to the problem of synchronous communication. Asynchronous communication such as email separates the operation of sending from receiving. This can be described as decoupling. The official term for the sender and receiver is producer and consumer. The producer produces a message and sends it. Initially, the message goes to the message queue. Once the message is added to the queue, the consumer is able to access the message according to the queue order. This way, the producer and consumer do not have to access the message queue at the same time. Separating these processes also makes the system more maintainable and scalable. 
+Message queues are an answer to the limitations of synchronous communication. Asynchronous communication such as email separates the operation of sending from receiving. This can be described as decoupling. The official term for the sender and receiver is producer and consumer. The producer produces a message and sends it. Initially, the message goes to the message queue. Once the message is added to the queue, the consumer is able to access the message according to the queue order. This way, the producer and consumer do not have to access the message queue at the same time. 
+
+The separation of the requesting and receiving program also makes for self-contained small programs which are relatively easier to maintain and modify.  
+
+Other benefits of message queues include: 
+Message-driven processing:Triggering can be used to start an application upon message arrivals. 
+
+Event-driven processing: Programs can be controlled according to the state of queues. An example would be specifying the number of messages that should be on the queue before a certain program starts. 
+
+Message priority: Messages can be assigned priority which determines their position on the queue. This can be done by the program adding messages. Other programs will be able to access a message on a queue based on its priority. 
 
 4.  Use cases of Message Queues 
 

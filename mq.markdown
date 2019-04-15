@@ -5,8 +5,8 @@ CONTENT
 1. What are Message Queues?
 2. What is asynchronous communications protocol?
 3. The need for Message Queues/ What problem do they solve?
-4. Types of Message Queues
-5. Use cases of Message queues / How Message Queues are used 
+4. Use cases of Message queues / How Message Queues are used 
+5. Types of Message Queues
 6. RabbitMQ 
 7. CloudMQ
 
@@ -15,7 +15,7 @@ CONTENT
 1. What are Message Queues? 
 
 Message queues are software-engineering components. In a system utilizing message queues, messages are queued up in sequential order. These messages are communicated between applications. An example of a message could relate to triggering a process to start by a receiving application. The content of the message could be a plain message, information about a task that has completed or one that is about to start. This is represented in a byte array with some headers included.
-One of the most important aspects of message queues is their asynchronous nature. This means that message queues are able to have a process running withouth blocking for responses or results. 
+One of the most important aspects of message queues is their asynchronous nature. This means that message queues are able to have a process running without blocking for responses or results. 
 
 
 2. What is asynchronous communications protocol?
@@ -24,7 +24,17 @@ Asynchronous operation is non-blocking and only initiates an operation instead o
 
 3. The need for Message Queues/ What problem do they solve?
 
-Message queues are an answer to the problem of synchronous communication. Asynchronous communication such as email separates the operation of sending from recieving. This can be described as decoupling. The official term for the sender and reciever is producer and consumer. The producer produces a message and sends it. Initially, the message goes to the message queue. Once the message is added to the queue, the consumer is able to access the message according to the queue order. This way, the producer and consumer do not have to access the message queue at the same time. 
+Message queues are an answer to the problem of synchronous communication. Asynchronous communication such as email separates the operation of sending from receiving. This can be described as decoupling. The official term for the sender and receiver is producer and consumer. The producer produces a message and sends it. Initially, the message goes to the message queue. Once the message is added to the queue, the consumer is able to access the message according to the queue order. This way, the producer and consumer do not have to access the message queue at the same time. Separating these processes also makes the system more maintainable and scalable. 
+
+4.  Use cases of Message Queues 
+
+Web services 
+
+One example of a use case is message queues in a web service. A web service that is able to request and return data might use a message queue. This makes the web service highly available to accepting requests regardless of the number of the request being sent. Furthermore, another message can access the message queue and handle the messages in order. This is all without having to wait for any process to get a response. This web service would be easy to scale up with growing workload because all that is needed to be done is adding more workers, receivers, to work off the queues faster (1). 
+
+
+
+
 
 
 

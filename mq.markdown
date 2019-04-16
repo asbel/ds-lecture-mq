@@ -136,6 +136,16 @@ java -cp .:amqp-client-5.5.1.jar:slf4j-api-1.7.25.jar:slf4j-simple-1.7.25.jar Se
  	On Windows : rabbitmqctl list_queues
 	On Mac : sudo rabbitmqctl list_queues
 
+Source: https://www.rabbitmq.com/tutorials/tutorial-one-java.html
+-----
+7. CloudMQ
+CloudAMQP are managed RabbitMQ servers in the cloud-hosted message queues that let you pass messages between processes and other systems. Messages are published to a queue by a producer, the consumers can then get the messages from the queue when the consumer wants to handle the messages. In-between, it can route, buffer, and persist the messages according to rules you give it.
+
+Creating a CloudAMQP instance
+In order to create an instance, we need to sign up for a plan that fits our needs. As of 04/2019, one can try CloudAMQP for free with the plan Lemur.
+CloudAMQP monitoring tools include diagrams for CPU and Memory usage. It is possible to activate alarms to be triggered when a part of the system is heavily used and it is easy to view the RabbitMQ log stream directly in CloudAMQP.
+
+
 
 
 

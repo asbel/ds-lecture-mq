@@ -27,7 +27,7 @@ Asynchronous operation is non-blocking and only initiates an operation instead o
 3. The need for Message Queues/ What problem do they solve?
 
 Message queues are an answer to the limitations of synchronous communication. Asynchronous communication such as email separates the operation of sending from receiving. This can be described as decoupling. The official term for the sender and receiver is producer and consumer. It is important to note that these two programs might be on completly different servers. The producer produces a message and sends it. Initially, the message goes to the message queue. Once the message is added to the queue, the consumer is able to access the message according to the queue order. This way, the producer and consumer do not have to access the message queue at the same time. 
-![Producer & Consumer](img/message-queue-example.png)
+![Message Queues](img/message-queue-example.png)
 The separation of the requesting and receiving program also makes for self-contained small programs which are relatively easier to maintain and modify.  
 Other benefits of message queues include: 
 Message-driven processing:Triggering can be used to start an application upon message arrivals. 
@@ -65,7 +65,9 @@ Message queueing is especially useful to increase the performance of web service
 RabbitMQ also complies with an open standard called messaging middleware called Advanced Message Queuing Protocol (AMQP). Middleware products written for different platforms and in different languages can send messages to one another. “AMQP enables complete interoperability for messaging middleware; both the networking protocol and the semantics of broker services are defined in AMQP”.(8)
 
 There are usually two parts that make a RabbitMQ application. The producer program and the consumer program. The producer is the program that sends the messages and the consumer is the program that waits to receive a message. Sometimes an application can be both producer and consumer. (8)
+
 ![Producer & Consumer](img/producerConsumer.png)
+
 RabbitMQ - A simple example in Java
 1. Make sure you have installed RabbitMQ on your machine 
 Instructions here: https://www.rabbitmq.com/download.html
@@ -138,8 +140,8 @@ java -cp .:amqp-client-5.5.1.jar:slf4j-api-1.7.25.jar:slf4j-simple-1.7.25.jar Se
 Source: https://www.rabbitmq.com/tutorials/tutorial-one-java.html
 -----
 7. CloudMQ
-CloudAMQP are managed RabbitMQ servers in the cloud-hosted message queues that let you pass messages between processes and other systems. Messages are published to a queue by a producer, the consumers can then get the messages from the queue when the consumer wants to handle the messages. In-between, it can route, buffer, and persist the messages according to rules you give it.
-![Producer & Consumer](img/camqp.png)
+CloudAMQP are managed RabbitMQ servers in the cloud-hosted message queues that let you pass messages between processes and other systems. Messages are published to a queue by a producer, the consumers can then get the messages from the queue when the consumer wants to handle the messages. In-between, it can route, bucffer, and persist the messages according to rules you give it.
+![CloudMQ](img/camqp.png)
 Creating a CloudAMQP instance
 In order to create an instance, we need to sign up for a plan that fits our needs. As of 04/2019, one can try CloudAMQP for free with the plan Lemur.
 CloudAMQP monitoring tools include diagrams for CPU and Memory usage. It is possible to activate alarms to be triggered when a part of the system is heavily used and it is easy to view the RabbitMQ log stream directly in CloudAMQP.

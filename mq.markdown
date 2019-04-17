@@ -30,6 +30,8 @@ Message queues are an answer to the limitations of synchronous communication. As
 
 The separation of the requesting and receiving program also makes for self-contained small programs which are relatively easier to maintain and modify.  
 
+![Producer & Consumer](img/producerConsumer.png)
+
 Other benefits of message queues include: 
 Message-driven processing:Triggering can be used to start an application upon message arrivals. 
 

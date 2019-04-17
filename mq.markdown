@@ -30,7 +30,7 @@ Asynchronous operation is non-blocking and only initiates an operation instead o
 ## 3. The need for Message Queues/ What problem do they solve?
 
 Message queues are an answer to the limitations of synchronous communication. Asynchronous communication such as email separates the operation of sending from receiving. This can be described as decoupling. The official term for the sender and receiver is producer and consumer. It is important to note that these two programs might be on completely different servers. The producer produces a message and sends it. Initially, the message goes to the message queue. Once the message is added to the queue, the consumer is able to access the message according to the queue order. This way, the producer and consumer do not have to access the message queue at the same time. 
-![Message Queues](img/message-queue-example.png)
+![Source: https://www.cloudamqp.com](img/message-queue-example.png)
 
 The separation of the requesting and receiving program also makes for self-contained small programs which are relatively easier to maintain and modify.  
 Other benefits of message queues include: 
@@ -159,7 +159,7 @@ java -cp .:amqp-client-5.5.1.jar:slf4j-api-1.7.25.jar:slf4j-simple-1.7.25.jar Se
 
 CloudAMQPs are managed RabbitMQ servers in the cloud-hosted message queues that let you pass messages between processes and other systems. Messages are published to a queue by a producer, the consumers can then get the messages from the queue when the consumer wants to handle the messages. In-between, it can route, buffer, and persist the messages according to rules you give it.
 ![CloudMQ](img/camqp.png)
-*CloudM(8)*
+*CloudMQ(8)*
 
 
 Creating a CloudAMQP instance

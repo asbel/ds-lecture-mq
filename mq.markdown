@@ -11,23 +11,23 @@
 4. Use cases of Message queues
 5. Types of Message Queues
 6. RabbitMQ 
-7. C##loudMQ
+7. CloudMQ
 8. Resources 
 9. Works cited 
 
 -------------------------------------------------------------
 
-##1. What are Message Queues? 
+## 1. What are Message Queues? 
 
 Message queues are software-engineering components. In a system utilizing message queues, messages are queued up in sequential order. These messages are communicated between applications. An example of a message could relate to triggering a process to start by a receiving ap##plication. The content of the message could be a plain message, information about a task that has completed or one that is about to start. This is represented in a byte array with some headers included.
 One of the most important aspects of message queues is their asynchronous nature. This means that message queues are able to have a process running without blocking for responses or results. 
 
 
-##2. What is asynchronous communications protocol?
+## 2. What is asynchronous communications protocol?
 
 Asynchronous operation is non-blocking and only initiates an operation instead of waiting for a  process to complete. One of the needs for as##yn hronous message passing is to achieve parallelism. While the message sent is still in transit, the computation can be done on the message. If a process is receiving a message, it can signal its interest in receiving messages on multiple ports simultaneously. In synchronous communication, such parallelism can be achieved by forking a separate process for each concurrent operation, but this requires more process management. Its main concept is to offload the processing to another thread or process to release the calling thread from waiting and it has become a standard model since the rise of GUIs(9).
 
-##3. The need for Message Queues/ What problem do they solve?
+## 3. The need for Message Queues/ What problem do they solve?
 
 Message queues are an answer to the limitations of synchronous communication. Asynchronous communication such as email separates the operation of sending from receiving. This can be described as decoupling. The official term for the sender and receiver is producer and consumer. It is important to note that these two programs might be on completly different servers. The producer produces a message and sends it. Initially, the message goes to the message queue. Once the message is added to the queue, the consumer is able to access the message according to the queue order. This way, the producer and consumer do not have to access the message queue at the same time. 
 ![Message Queues](img/message-queue-example.png)
@@ -40,12 +40,12 @@ Ev##en driven processing: Programs can be controlled according to the state of q
 
 Messe priority: Messages can be assigned priority which determines their position on the queue. This can be done by the program adding messages. Other programs will be able to access a message on a queue based on its priority(8).
 
-##4. Use cases of Message Queues 
+## 4. Use cases of Message Queues 
 
 Web services 
 One ex mple of a use case is message queues in a web service. A web service that is able to request and return data might use a message queue. This makes the web service highly available to accepting requests regardless of the number of the request being sent. Furthermore, another message can access the message queue and handle the messages in order. This is all without having to wait for any process to get a response. This web service would be easy to scale up with growing workload because all that is needed to be done is adding more workers, receivers, to work off the queues faster (9). 
 
-##5. Types of Message Queues
+## 5. Types of Message Queues
 There are various implementations of message queues. Each has its own benefits and shortcomings. Below are a few of them. 
 RabbitMQ
 Kafka
@@ -57,7 +57,7 @@ ZeroMQ
 CloudMQ 
 When trying to choose one, developers usually consider the maturity of the project, community, and performance. In this chapter, we will expound more on RabbitMQ and CloudMQ. 
 
-##6. RabbitMQ 
+## 6. RabbitMQ 
 The official website for RabbitMQ defines it as a message broker. In other words, it is a message oriented middleware. 
 
 “Message Oriented Middleware is a concept that involves the passing of data between applications using a communication channel that carries self-contained units of information (messages). In a MOM-based communication environment, messages are usually sent and received asynchronously. Using message-based communications, applications are abstractly decoupled; senders and receivers are never aware of each other. ##Instead, they send and receive messages to and from the messaging system. It is the responsibility of the messaging system (MOM) to get the messages to their intended destinations.” (2)
@@ -148,7 +148,7 @@ java -cp .:amqp-client-5.5.1.jar:slf4j-api-1.7.25.jar:slf4j-simple-1.7.25.jar Se
 ~~~~
 *Source: https://www.rabbitmq.com/tutorials/tutorial-one-java.html*
 -----
-##7. CloudMQ
+## 7. CloudMQ
 
 CloudAMQP are managed RabbitMQ servers in the cloud-hosted message queues that let you pass messages between processes and other systems. Messages are published to a queue by a producer, the consumers can then get the messages from the queue when the consumer wants to handle the messages. In-between, it can route, bucffer, and persist the messages according to rules you give it.
 ![CloudMQ](img/camqp.png)
@@ -163,7 +163,7 @@ CloudAMQP monitoring tools include diagrams for CPU and Memory usage. It is poss
 
 
 
-	##Works Cited 
+## Works Cited 
 
 
 

@@ -47,14 +47,14 @@ One ex mple of a use case is message queues in a web service. A web service that
 
 ## 5. Types of Message Queues
 There are various implementations of message queues. Each has its own benefits and shortcomings. Below are a few of them. 
-RabbitMQ
-Kafka
-RocketMQ
-Qpid
-Artemis
-NSQ
-ZeroMQ
-CloudMQ 
+- RabbitMQ
+- Kafka
+- RocketMQ
+- Qpid
+- Artemis
+- NSQ
+- ZeroMQ
+- CloudMQ 
 When trying to choose one, developers usually consider the maturity of the project, community, and performance. In this chapter, we will expound more on RabbitMQ and CloudMQ. 
 
 ## 6. RabbitMQ 
@@ -68,7 +68,7 @@ Message queueing is especially useful to increase the performance of web service
 
 RabbitMQ also complies with an open standard called messaging middleware called Advanced Message Queuing Protocol (AMQP). Middleware products written for different platforms and in different languages can send messages to one another. “AMQP enables complete interoperability for messaging middleware; both the networking protocol and the semantics of broker services are defined in AMQP”.(1)
 
-There are usually two parts that make a RabbitMQ application. The producer program and the consumer program. The producer is the program that sends the messages and the consumer is the program that waits to receive a message. Sometimes an application can be both producer and consumer. (1)
+There are usually two parts that make a RabbitMQ application. The producer program and the consumer program. The producer is the program that sends the messages and the consumer is the program that waits to receive a message. Sometimes an application can be both producer and consumer(1).
 
 ![Producer & Consumer](img/producerConsumer.png)
 *Producers and consumers are abstractly decoupled from each other using virtual channels                                                  known as publish-and-subscribe topics and point-to-point queues(2).*

@@ -153,8 +153,8 @@ java -cp .:amqp-client-5.5.1.jar:slf4j-api-1.7.25.jar:slf4j-simple-1.7.25.jar Se
  	On Windows : rabbitmqctl list_queues
 	On Mac : sudo rabbitmqctl list_queues
 ~~~~
-[*Source: https://www.rabbitmq.com/tutorials/tutorial-one-java.html*]
------
+![*Source: https://www.rabbitmq.com/tutorials/tutorial-one-java.html*]
+
 ## 7. CloudMQ
 
 CloudAMQPs are managed RabbitMQ servers in the cloud-hosted message queues that let you pass messages between processes and other systems. Messages are published to a queue by a producer, the consumers can then get the messages from the queue when the consumer wants to handle the messages. In-between, it can route, buffer, and persist the messages according to rules you give it.

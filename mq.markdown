@@ -153,7 +153,7 @@ java -cp .:amqp-client-5.5.1.jar:slf4j-api-1.7.25.jar:slf4j-simple-1.7.25.jar Se
  	On Windows : rabbitmqctl list_queues
 	On Mac : sudo rabbitmqctl list_queues
 ~~~~
-*Source: https://www.rabbitmq.com/tutorials/tutorial-one-java.html*
+*~Source: https://www.rabbitmq.com/tutorials/tutorial-one-java.html~*
 -----
 ## 7. CloudMQ
 

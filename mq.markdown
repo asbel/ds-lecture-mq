@@ -31,7 +31,9 @@ Asynchronous operation is non-blocking and only initiates an operation instead o
 
 Message queues are an answer to the limitations of synchronous communication. Asynchronous communication such as email separates the operation of sending from receiving. This can be described as decoupling. The official term for the sender and receiver is producer and consumer. It is important to note that these two programs might be on completely different servers. The producer produces a message and sends it. Initially, the message goes to the message queue. Once the message is added to the queue, the consumer is able to access the message according to the queue order. This way, the producer and consumer do not have to access the message queue at the same time. 
 ![Source: https://www.cloudamqp.com](img/message-queue-example.png)
-![Source: https://www.cloudamqp.com]
+Source: https://www.cloudamqp.com
+
+
 The separation of the requesting and receiving program also makes for self-contained small programs which are relatively easier to maintain and modify.  
 Other benefits of message queues include: 
 Message-driven processing: Triggering can be used to start an application upon message arrivals. 
@@ -153,7 +155,7 @@ java -cp .:amqp-client-5.5.1.jar:slf4j-api-1.7.25.jar:slf4j-simple-1.7.25.jar Se
  	On Windows : rabbitmqctl list_queues
 	On Mac : sudo rabbitmqctl list_queues
 ~~~~
-![*Source: https://www.rabbitmq.com/tutorials/tutorial-one-java.html*]
+Source: https://www.rabbitmq.com/tutorials/tutorial-one-java.html
 
 ## 7. CloudMQ
 

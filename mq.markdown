@@ -3,7 +3,7 @@
 
 # Message Queue
 
-## CONTENT
+## Content
 
 1. What are Message Queues?
 2. What is asynchronous communications protocol?
@@ -36,21 +36,21 @@ Source: https://www.cloudamqp.com
 
 The separation of the requesting and receiving program also makes for self-contained small programs which are relatively easier to maintain and modify.  
 Other benefits of message queues include: 
-Message-driven processing: Triggering can be used to start an application upon message arrivals. 
+- Message-driven processing: triggering can be used to start an application upon message arrivals. 
 
-Event-driven processing: Programs can be controlled according to the state of queues. An example would be specifying the number of messages that should be on the queue before a certain program starts. 
+- Event-driven processing: programs can be controlled according to the state of queues. An example would be specifying the number of messages that should be on the queue before a certain program starts. 
 
-Messe priority: Messages can be assigned priority which determines their position on the queue. This can be done by the program adding messages. Other programs will be able to access a message on a queue based on its priority(8).
+- Messe priority: messages can be assigned priority which determines their position on the queue. This can be done by the program adding messages. Other programs will be able to access a message on a queue based on its priority(8).
 
 ## 4. Use cases of Message Queues 
 
-Web services 
+### Web Services 
 One example of a use case is message queues in a web service. A web service that is able to request and return data might use a message queue. This makes the web service highly available to accepting requests regardless of the number of the request being sent. Furthermore, another message can access the message queue and handle the messages in order. This is all without having to wait for any process to get a response. This web service would be easy to scale up with growing workload because all that is needed to be done is adding more workers, receivers, to work off the queues faster (9). 
 
-Asynchronous Indexation in search engines: 
+### Asynchronous Indexation in Search Engines
 
 
-When it comes to search engines, indexing is one of the biggest tasks. In asynchronous indexation, most of the indexation operations are performed asynchronously using a message queue. This speeds up the performance of the search engine as the user does not have to wait for indexation before seeing the response from the application. Asynchronous indexations can also be performed in parallel to speed up overall indexation process. Every time some entity which should be represented by a document in a search index is changed the new message that contains entity class and entity identifier is generated and sent to the message queue. Then message queue consumer receives this message and runs appropriate message processor that performs real indexation and does real change in the search index. Parallel indexation is also possible. However, this is only if there are several message queue consumers running – each consumer is able to run indexation, so the bigger amount of consumers running the more indexations can be performed in parallel. “All automatically triggered re-indexations are processed asynchronously.”(11)
+When it comes to search engines, indexing is one of the biggest tasks. In asynchronous indexation, most of the indexation operations are performed asynchronously using a message queue. This speeds up the performance of the search engine as the user does not have to wait for indexation before seeing the response from the application. Asynchronous indexations can also be performed in parallel to speed up overall indexation process. Every time some entity which should be represented by a document in a search index is changed the new message that contains entity class and entity identifier is generated and sent to the message queue. Then the message queue consumer receives this message and runs the appropriate message processor that performs real indexation and does real change in the search index. Parallel indexation is also possible. However, this is only if there are several message queue consumers running – each consumer is able to run indexation, so the bigger amount of consumers running the more indexations can be performed in parallel. “All automatically triggered re-indexations are processed asynchronously.”(11)
 
 
 ## 5. Types of Message Queues
